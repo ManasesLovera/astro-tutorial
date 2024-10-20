@@ -1,29 +1,11 @@
 ---
-import '../styles/global.css';
-import Hamburger from '../components/Hamburger.astro';
-import Navigation from '../components/Navigation.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle="Experience"
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Experience</title>
-
-	</head>
-	<body>
-		<Hamburger />
-		<Navigation />
-		<h1>Experience</h1>
-        
-        <h3>Software Developer - Oriontek</h3>
-        <i>April 2024 - July 2024</i>
-        <p>
-            I worked as a fullstack developer using ASP .NET Core and React for building from scratch an application, I was responsible mainly in the backend but also frontend and deploy both react and .net applications to the cloud using Netlify for the frontend and Azure for the backend.
-        </p>
-		<Footer />
-	</body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+	<h3>Software Developer - Oriontek</h3>
+	<i>April 2024 - July 2024</i>
+	<p>
+		I worked as a fullstack developer using ASP .NET Core and React for building from scratch an application, I was responsible mainly in the backend but also frontend and deploy both react and .net applications to the cloud using Netlify for the frontend and Azure for the backend.
+	</p>
+</BaseLayout>

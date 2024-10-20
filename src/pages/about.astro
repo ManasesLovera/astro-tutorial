@@ -1,8 +1,5 @@
 ---
-import '../styles/global.css';
-import Hamburger from '../components/Hamburger.astro';
-import Navigation from '../components/Navigation.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
 const pageTitle = "About me"
 
@@ -20,44 +17,29 @@ const otherTechSkills = ['Nestjs', 'Astro', 'Angular']
 const skillColor = "navy";
 const fontWeight = "bold";
 ---
+<style define:vars={{skillColor, fontWeight}}>
+    .skill {
+        color: var(--skillColor);
+        font-weight: var(--fontWeight);
+    }
+</style>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-        <style define:vars={{skillColor, fontWeight}}>
-            .skill {
-                color: var(--skillColor);
-                font-weight: var(--fontWeight);
-            }
-		</style>
-	</head>
-	<body>
-        <Hamburger />
-        <Navigation />
-
-        <h1>{pageTitle}</h1>
+<BaseLayout pageTitle={pageTitle}>
+    <ul>
+        <li>My name is {identity.firstName}.</li>
+        <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
+    </ul>
+    <h3>Main Tech Skills</h3>
+    <ul>
+        {
+            mainTechSkills.map( skill => <li class="skill">{skill}</li>)
+        }
+    </ul>
+    <h3>Other Tech Skills</h3>
+    <ul>
+        {
+            otherTechSkills.map( skill => <li class="skill">{skill}</li>)
+        }
+    </ul>
+</BaseLayout>
         
-        <ul>
-            <li>My name is {identity.firstName}.</li>
-            <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
-        </ul>
-        <h3>Main Tech Skills</h3>
-        <ul>
-            {
-                mainTechSkills.map( skill => <li class="skill">{skill}</li>)
-            }
-        </ul>
-        <h3>Other Tech Skills</h3>
-        <ul>
-            {
-                otherTechSkills.map( skill => <li class="skill">{skill}</li>)
-            }
-        </ul>
-
-        <Footer />
-      </body>
-</html>

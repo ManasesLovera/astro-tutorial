@@ -1,31 +1,12 @@
 ---
-import '../styles/global.css';
-import Hamburger from '../components/Hamburger.astro';
-import Navigation from '../components/Navigation.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle="Manases Lovera"
 ---
+<BaseLayout pageTitle={pageTitle} >
+	<h2>Software Developer</h2>
+	<p>
+		I am a software developer with a passion for technology and continuous learning. Currently pursuing a degree in Software Engineering, I have also completed an intensive coding bootcamp. I have experience working with technologies such as .NET, ASP.NET Core, Nestjs, and React, and have contributed to various projects involving APIs, web applications, and database management. I thrive on challenges that allow me to grow both technically and professionally, always aiming to build efficient, high-quality solutions.
+	</p>
+</BaseLayout>
+		
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Home</title>
-
-	</head>
-	<body>
-		<Hamburger />
-		<Navigation />
-		<h1>Manases Lovera</h1>
-		<h2>Software Developer</h2>
-		<p>
-			I am a software developer with a passion for technology and continuous learning. Currently pursuing a degree in Software Engineering, I have also completed an intensive coding bootcamp. I have experience working with technologies such as .NET, ASP.NET Core, Nestjs, and React, and have contributed to various projects involving APIs, web applications, and database management. I thrive on challenges that allow me to grow both technically and professionally, always aiming to build efficient, high-quality solutions.
-		</p>
-	
-		<Footer />
-		<script>
-			import '../scripts/menu.js';
-		</script>
-	</body>
-</html>

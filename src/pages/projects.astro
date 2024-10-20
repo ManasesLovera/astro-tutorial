@@ -1,29 +1,10 @@
 ---
-import '../styles/global.css';
-import Hamburger from '../components/Hamburger.astro';
-import Navigation from '../components/Navigation.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle="Projects"
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Projects</title>
+<BaseLayout pageTitle={pageTitle}>
+	<h2>Personal projects:</h2>
 
-	</head>
-	<body>
-		<Hamburger />
-		<Navigation />
-		<h1>Projects</h1>
-
-		<h2>Personal projects:</h2>
-
-        <h2>Projects I've been part of:</h2>
-        
-	
-		<Footer />
-	</body>
-</html>
+    <h2>Projects I've been part of:</h2>
+</BaseLayout>
