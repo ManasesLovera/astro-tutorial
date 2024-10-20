@@ -2,9 +2,6 @@
 import '../styles/global.css';
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
-
-const happy = true;
-const finished = false;
 ---
 
 <html lang="en">
@@ -13,13 +10,16 @@ const finished = false;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Home</title>
+
 	</head>
 	<body>
 		<Navigation />
-		<h1>My site with astro</h1>
-		{happy && <p>I'm happy to learn Astro!</p>}
-		{finished ? <p>I've finished this tutorial</p> : <p>I haven't finished this tutorial</p>}
+		<h1>Manases Lovera</h1>
+		<h2>Software Developer</h2>
+		<p>
+			I am a software developer with a passion for technology and continuous learning. Currently pursuing a degree in Software Engineering, I have also completed an intensive coding bootcamp. I have experience working with technologies such as .NET, ASP.NET Core, Nestjs, and React, and have contributed to various projects involving APIs, web applications, and database management. I thrive on challenges that allow me to grow both technically and professionally, always aiming to build efficient, high-quality solutions.
+		</p>
 	
 		<Footer />
 	</body>
