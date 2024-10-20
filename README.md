@@ -1,4 +1,8 @@
+
+This website is deployed here: https://learning-astro-with-tutorial.netlify.app/
+
 # Astro Starter Kit: Minimal
+
 
 ```sh
 npm create astro@latest -- --template minimal
