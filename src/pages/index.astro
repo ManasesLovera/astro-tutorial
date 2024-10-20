@@ -1,5 +1,6 @@
 ---
-
+const happy = true;
+const finished = false;
 ---
 
 <html lang="en">
@@ -19,5 +20,7 @@
             </ul>
         </nav>
 		<h1>Mi sitio Astro</h1>
+		{happy && <p>I'm happy to learn Astro!</p>}
+		{finished ? <p>I've finished this tutorial</p> : <p>I haven't finished this tutorial</p>}
 	</body>
 </html>
