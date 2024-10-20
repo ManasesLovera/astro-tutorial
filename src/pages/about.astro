@@ -1,8 +1,10 @@
 ---
+import '../styles/global.css';
+
 const pageTitle = "About me"
 
 const identity = {
-    firstName: 'Manases',
+    firstName: 'Manases Lovera',
     country: 'Domincan Republic',
     occupation: 'Software Developer',
     hobbies: []
@@ -10,6 +12,10 @@ const identity = {
 
 const mainTechSkills = ['ASP .NET Core / C#', 'Javascript', 'Typescript', 'React', 'Express']
 const otherTechSkills = ['Nestjs', 'Astro', 'Angular']
+
+// Styles
+const skillColor = "navy";
+const fontWeight = "bold";
 ---
 
 <html lang="en">
@@ -19,6 +25,16 @@ const otherTechSkills = ['Nestjs', 'Astro', 'Angular']
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
+        <style define:vars={{skillColor, fontWeight}}>
+			h1 {
+                color: purple;
+                
+            }
+            .skill {
+                color: var(--skillColor);
+                font-weight: var(--fontWeight);
+            }
+		</style>
 	</head>
 	<body>
         <nav>
@@ -32,19 +48,19 @@ const otherTechSkills = ['Nestjs', 'Astro', 'Angular']
         <h1>{pageTitle}</h1>
         
         <ul>
-            <li>My name is {identity.firstName}</li>
-            <li>I live in {identity.country} and I work as a {identity.occupation}</li>
+            <li>My name is {identity.firstName}.</li>
+            <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
         </ul>
         <h3>Main Tech Skills</h3>
         <ul>
             {
-                mainTechSkills.map( skill => <li>{skill}</li>)
+                mainTechSkills.map( skill => <li class="skill">{skill}</li>)
             }
         </ul>
         <h3>Other Tech Skills</h3>
         <ul>
             {
-                otherTechSkills.map( skill => <li>{skill}</li>)
+                otherTechSkills.map( skill => <li class="skill">{skill}</li>)
             }
         </ul>
       </body>

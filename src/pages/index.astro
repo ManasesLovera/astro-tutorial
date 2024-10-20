@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css';
+
 const happy = true;
 const finished = false;
 ---
@@ -10,6 +12,11 @@ const finished = false;
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
+		<style>
+			h1 {
+				color:cornflowerblue;
+			}
+		</style>
 	</head>
 	<body>
 		<nav>
