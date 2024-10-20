@@ -3,3 +3,13 @@ const { platform, username } = Astro.props;
 const extra = platform === 'linkedin' ? '/in' : '';
 ---
 <a target="_blank" href={`https://www.${platform}.com${extra}/${username}`}>{platform}</a>
+
+<style>
+    a {
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        color: white;
+        background-color: #643ca1;
+        text-decoration: none;
+    }
+</style>
