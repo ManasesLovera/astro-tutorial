@@ -4,18 +4,30 @@ import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 const { frontmatter } = Astro.props;
 ---
-<style>
-    a {
-        text-decoration: none;
-    }
-</style>
-<Header />
-<a href="/blog">{'<'}</a>
-<h1>{frontmatter.title}</h1>
-<b>Escrito por: {frontmatter.author}</b><br>
-<b>Publicado el: {frontmatter.pubDate.toString().slice(0,10)}</b>
-<slot />
-<Footer />
-<script>
-    import "../scripts/menu.js";
-</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content={Astro.generator} />
+    <title>{frontmatter.title}</title>
+    <style>
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <Header />
+    <a href="/blog">{'<'}</a>
+    <h1>{frontmatter.title}</h1>
+    <b>Escrito por: {frontmatter.author}</b><br>
+    <b>Publicado el: {frontmatter.pubDate.toString().slice(0,10)}</b>
+    <slot />
+    <Footer />
+    <script>
+        import "../scripts/menu.js";
+    </script>
+</body>
+</html>
