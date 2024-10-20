@@ -62,10 +62,13 @@ h1 {
 @media screen and (min-width: 636px) {
     .nav-links {
         margin-left: 5em;
-        display: block;
+        display: flex;
         position: static;
         width: auto;
         background: none;
+        margin: 0;
+        align-items: center;
+        justify-content: center;
     }
 
     .nav-links a {
