@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Navigation from '../components/navigation.astro';
 
 const pageTitle = "About me"
 
@@ -37,13 +38,7 @@ const fontWeight = "bold";
 		</style>
 	</head>
 	<body>
-        <nav>
-            <ul>
-                <a href="/">Home</a> -
-                <a href="/about">About</a> -
-                <a href="/blog">Blog</a>
-            </ul>
-        </nav>
+        <Navigation />
 
         <h1>{pageTitle}</h1>
         

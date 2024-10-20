@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Navigation from '../components/navigation.astro';
 
 const happy = true;
 const finished = false;
@@ -19,13 +20,7 @@ const finished = false;
 		</style>
 	</head>
 	<body>
-		<nav>
-            <ul>
-                <a href="/">Home</a> -
-                <a href="/about">About</a> -
-				<a href="/blog">Blog</a>
-            </ul>
-        </nav>
+		<Navigation />
 		<h1>Mi sitio Astro</h1>
 		{happy && <p>I'm happy to learn Astro!</p>}
 		{finished ? <p>I've finished this tutorial</p> : <p>I haven't finished this tutorial</p>}
