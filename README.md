@@ -53,3 +53,4 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 ## Resources
 
 1. [Markdown cheatsheet](https://www.markdownguide.org/cheat-sheet/)
+2. [YAML front matter](https://assemble.io/docs/YAML-front-matter.html)
