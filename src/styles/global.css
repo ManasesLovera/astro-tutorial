@@ -22,6 +22,8 @@ h1 {
 .hamburger {
     padding-right: 20px;
     cursor: pointer;
+    position: absolute;
+    right: 20px;
 }
 
 .hamburger .line {
