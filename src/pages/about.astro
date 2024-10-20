@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
-import Navigation from '../components/navigation.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
 
 const pageTitle = "About me"
 
@@ -58,5 +59,7 @@ const fontWeight = "bold";
                 otherTechSkills.map( skill => <li class="skill">{skill}</li>)
             }
         </ul>
+
+        <Footer />
       </body>
 </html>
