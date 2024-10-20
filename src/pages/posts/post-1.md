@@ -8,7 +8,7 @@ image:
     alt: 'El logotipo completo de Astro.'
 tags: ["astro", "blogear", "aprender en público"]
 ---
->
+
 [Home](/) -
 [About](/about) -
 [Blog](/blog)
