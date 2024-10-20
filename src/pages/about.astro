@@ -4,8 +4,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "About me"
 
 const identity = {
-    firstName: 'Manases Lovera',
-    country: 'Domincan Republic',
+    firstName: 'Manasés Lovera',
+    country: 'Dominican Republic',
     occupation: 'Software Developer',
     hobbies: []
 }
@@ -25,10 +25,9 @@ const fontWeight = "bold";
 </style>
 
 <BaseLayout pageTitle={pageTitle}>
-    <ul>
-        <li>My name is {identity.firstName}.</li>
-        <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
-    </ul>
+    <p>
+        Hi, my name is {identity.firstName}. I live in {identity.country} and I work as a {identity.occupation}.
+    </p>
     <h3>Main Tech Skills</h3>
     <ul>
         {
