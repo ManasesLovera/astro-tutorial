@@ -57,7 +57,7 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-### If you are deploying using Github Pages
+## If you are deploying using Github Pages
 
 You may have an error because github somehow guess you are using [Jekyll](https://jekyllrb.com/) and it's not able to compile, you must do the following if you are using Astro with Github Pages with custom domain:
 
