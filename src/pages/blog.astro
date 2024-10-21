@@ -7,9 +7,6 @@ const pageTitle="Blog"
 <BaseLayout pageTitle={pageTitle}>
   <h3>All posts:</h3>
   <ul>
-      <!-- <li><a href="/posts/1.youready/">¿Estás listo para buscar trabajo de programador?</a></li>
-      <li><a href="/posts/2.whyprogrammer/">¿Por qué quieres ser programador?</a></li>
-      <li><a href="/posts/DAvsFV/">Data Annotations vs Fluent Validation</a></li> -->
       {
         allPosts.map( post => <BlogPost url={post.url} title={post.frontmatter.title}/>)
       }
