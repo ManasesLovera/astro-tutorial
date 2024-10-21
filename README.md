@@ -46,7 +46,23 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+### If you are deploying using Github Pages
+
+You may have an error because github somehow guess you are using [Jekyll](https://jekyllrb.com/) and it's not able to compile, you must do the following if you are using Astro with Github Pages with custom domain:
+
+First create a file named `.nojekyll` leave it empty and also modify the file named `astro.config.mjs` and it must look like this:
+```js
+import { defineConfig } from 'astro/config';
+
+// https://astro.build/config
+export default defineConfig({
+    output: 'static',
+    build: {
+      outDir: 'docs', // Change the output directory to 'docs'
+    },
+    site: 'https://example.com', // Replace with your custom domain
+  });
+```
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
 
