@@ -22,9 +22,20 @@ Inside of your Astro project, you'll see the following folders and files:
 /
 ├── public/
 ├── src/
+│   └── components/
+│           └── Component.astro
+│   └── layouts/
+│           └── BaseLayout.astro
 │   └── pages/
+│       └── posts/
+│           └── post.md
 │       └── index.astro
-└── package.json
+│   └── scripts/
+│   └── styles/
+├── .gitignore
+├── .nojekyll
+├── CNAME
+└── README.md
 ```
 
 Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
