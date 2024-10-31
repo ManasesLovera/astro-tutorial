@@ -3,7 +3,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle="Manases Lovera"
 
 const mainTechSkills = ['ASP .NET Core / C#', 'Javascript / Typescript', 'React', 'Express']
-const otherTechSkills = ['Nestjs', 'Astro', 'Angular']
 ---
 <BaseLayout pageTitle={pageTitle} >
 	<h2>Software Engineer Jr</h2>
@@ -14,12 +13,6 @@ const otherTechSkills = ['Nestjs', 'Astro', 'Angular']
 	<ul>
         {
             mainTechSkills.map( skill => <li class="skill">{skill}</li> )
-        }
-    </ul>
-    <h3>Other Tech Skills</h3>
-    <ul>
-        {
-            otherTechSkills.map( skill => <li class="skill">{skill}</li> )
         }
     </ul>
 </BaseLayout>
